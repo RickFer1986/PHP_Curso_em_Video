@@ -8,10 +8,10 @@
 <body>
 <div>
     <?php
-
-        $nome = $_GET['nome'];
-        $ano = $_GET['ano'];
-        $sexo = $_GET['sexo'];
+        # ISSET: significa foi configurado (se foi passado como parâmetro)
+        $nome = isset($_GET['nome']) ? $_GET['nome'] : "[Não informado]";
+        $ano = isset($_GET['ano']) ? $_GET['ano'] : 0;
+        $sexo = isset($_GET['sexo']) ? $_GET['sexo'] : "[Sem sexo]";
 
         $idade = date("Y") - $ano;
 
